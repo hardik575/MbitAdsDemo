@@ -1,0 +1,108 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.example</groupId>
+    <artifactId>my-library</artifactId>
+    <version>1.0.0</version>
+    <packaging>jar</packaging>
+
+    <name>My Library</name>
+    <description>A simple Java library project with various dependencies.</description>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.google.android.gms</groupId>
+            <artifactId>play-services-ads</artifactId>
+            <version>22.2.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.android.ump</groupId>
+            <artifactId>user-messaging-platform</artifactId>
+            <version>2.2.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.ads.mediation</groupId>
+            <artifactId>vungle</artifactId>
+            <version>7.3.2.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.facebook.android</groupId>
+            <artifactId>facebook-android-sdk</artifactId>
+            <version>17.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.ads.mediation</groupId>
+            <artifactId>mintegral</artifactId>
+            <version>16.7.51.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.applovin</groupId>
+            <artifactId>applovin-sdk</artifactId>
+            <version>12.5.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.pangle.global</groupId>
+            <artifactId>ads-sdk</artifactId>
+            <version>5.9.0.4</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.ads.mediation</groupId>
+            <artifactId>facebook</artifactId>
+            <version>6.17.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.firebase</groupId>
+            <artifactId>firebase-analytics</artifactId>
+            <version>22.0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.firebase</groupId>
+            <artifactId>firebase-config</artifactId>
+            <version>22.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.facebook.shimmer</groupId>
+            <artifactId>shimmer</artifactId>
+            <version>0.5.0</version>
+            <type>aar</type>
+        </dependency>
+        <dependency>
+            <groupId>com.github.bumptech.glide</groupId>
+            <artifactId>glide</artifactId>
+            <version>4.16.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.intuit.sdp</groupId>
+            <artifactId>sdp-android</artifactId>
+            <version>1.1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.intuit.ssp</groupId>
+            <artifactId>ssp-android</artifactId>
+            <version>1.1.0</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <!-- Compiler Plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
