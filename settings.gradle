@@ -21,7 +21,7 @@ pluginManagement {
     }
 }
 dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+//    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
         google()
         mavenCentral()
@@ -30,14 +30,14 @@ dependencyResolutionManagement {
         }
         maven { url='https://jitpack.io'}
         jcenter()
-        maven {
-            url 'https://artifact.bytedance.com/repository/pangle'
-        }
-        maven {
-            url 'https://dl-maven-android.mintegral.com/repository/mbridge_android_sdk_oversea'
-        }
+//        maven {
+//            url 'https://artifact.bytedance.com/repository/pangle'
+//        }
+//        maven {
+//            url 'https://dl-maven-android.mintegral.com/repository/mbridge_android_sdk_oversea'
+//        }
 
-        mavenCentral()
+//        mavenCentral()
 //        maven {
 //            name = "GitHubPackages"
 //            url = uri("https://maven.pkg.github.com/hardik575/MbitAds")
