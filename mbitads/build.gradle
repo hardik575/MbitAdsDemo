@@ -1,7 +1,8 @@
 plugins {
-    id 'com.android.application'
-//    id 'com.android.library'
+//    id 'com.android.application'
+    id 'com.android.library'
     id 'kotlin-android'
+    id 'maven-publish'
 }
 
 android {
@@ -9,12 +10,12 @@ android {
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.ads.mbitads"
+//        applicationId "com.ads.mbitads"
         minSdk 24
         targetSdk 34
         versionCode 1
         versionName "1.2"
-        multiDexEnabled=true
+        multiDexEnabled = true
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -40,9 +41,7 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'androidx.activity:activity:1.8.0'
     implementation 'androidx.lifecycle:lifecycle-process:2.8.2'
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
 
     // ad libary
 
@@ -71,4 +70,55 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
     implementation "androidx.lifecycle:lifecycle-runtime:$lifecycle_version"
     annotationProcessor "androidx.lifecycle:lifecycle-compiler:$lifecycle_version"
+}
+afterEvaluate {
+
+    android.libraryVariants.each {varint ->
+
+        publishing.publications.create(varint.name,MavenPublication){
+            groupId = 'com.ads'
+            artifactId = 'mbitads'
+            version = '1.1-SNAPSHOT'
+
+            // Ensure the task produces the AAR file
+            artifact("$buildDir/outputs/aar/${project.name}-release.aar")
+        }
+
+
+
+
+        publishing {
+//            publications {
+//                create("libraryProject", MavenPublication) {
+//                    groupId = 'com.ads'
+//                    artifactId = 'mbitads'
+//                    version = '1.1'
+//
+//                    // Ensure the task produces the AAR file
+//                    artifact("$buildDir/outputs/aar/${project.name}-release.aar")
+//                }
+//            }
+            repositories {
+                maven {
+                    name = "GitHubPackages"
+                    url = uri("https://maven.pkg.github.com/hardik575/MbitAds")
+//                credentials {
+//                    username = System.getenv("hardik575")
+//                    password = System.getenv("GITHUB_TOKEN")
+//                }
+                    credentials {
+                        username = "hardik575"
+                        password = "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"
+                    }
+                    mavenContent {
+                        snapshotsOnly() // Ensure it only allows snapshots
+                    }
+                }
+            }
+
+
+        }
+    }
+
+
 }
