@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Voice Translate</string>
+    <string name="loading_ads">Loading Ads...</string>
+    <string name="facebook_application_id">718989803515764</string>
+
+    <string name="admob_app_id" translatable="false">ca-app-pub-4973559944609228~8148968625</string>
+
+
+    <string name="intrsial_ad_id" translatable="false">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="bannner_id" translatable="false">ca-app-pub-3940256099942544/2014213617</string>
+    <string name="fb_bannner_id" translatable="false">YOUR_PLACEMENT_ID</string>
+    <string name="app_open_resume_id" translatable="false">ca-app-pub-3940256099942544/9257395921</string>
+
+
+    <string name="native_languge_one_id" translatable="false">ca-app-pub-3940256099942544/2247696110</string>
+    <string name="fb_native_languge_one_id" translatable="false">YOUR_PLACEMENT_ID</string>
+    <string name="native_languge_one_high_floor_id" translatable="false">ca-app-pub-3940256099942544/2247696110</string>
+    <string name="native_languge_two_id" translatable="false">ca-app-pub-3940256099942544/2247696110</string>
+    <string name="fb_native_languge_two_id" translatable="false">ca-app-pub-3940256099942544/2247696110</string>
+    <string name="native_languge_two_high_floor_id" translatable="false">ca-app-pub-3940256099942544/2247696110</string>
+
+    <string name="native_start_screen_id" translatable="false">ca-app-pub-3940256099942544/2247696110</string>
+    <string name="fb_native_start_screen_id" translatable="false">YOUR_PLACEMENT_ID</string>
+
+    <string name="native_onbording_one_id" translatable="false">ca-app-pub-3940256099942544/2247696110</string>
+    <string name="fb_native_onbording_one_id" translatable="false">YOUR_PLACEMENT_ID</string>
+    <string name="native_onbording_two_id" translatable="false">ca-app-pub-3940256099942544/2247696110</string>
+    <string name="fb_native_onbording_two_id" translatable="false">YOUR_PLACEMENT_ID</string>
+    <string name="native_onbording_three_id" translatable="false">ca-app-pub-3940256099942544/2247696110</string>
+    <string name="fb_native_onbording_three_id" translatable="false">YOUR_PLACEMENT_ID</string>
+    <string name="spalsh_app_resume_open_id" translatable="false">ca-app-pub-3940256099942544/9257395921</string>
+
+
+</resources>
