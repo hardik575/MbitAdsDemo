@@ -68,10 +68,8 @@ dependencies {
     api('com.android.billingclient:billing:7.0.0')
 }
 
-task sourceJar(type: Jar) {
-    from android.sourceSets.main.java.srcDirs
-    classifier "sources"
-}
+
+
 
 afterEvaluate {
 
