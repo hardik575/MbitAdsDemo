@@ -1,4 +1,4 @@
-package com.mbitadsdk.nativead;
+package com.ads.mbitadsdk.nativead;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -13,6 +13,8 @@ import androidx.lifecycle.Lifecycle;
 import androidx.lifecycle.LifecycleEventObserver;
 import androidx.lifecycle.LifecycleOwner;
 
+import com.ads.mbitadsdk.AdUtils;
+import com.ads.mbitsdkmodel.R;
 import com.facebook.ads.NativeAd;
 import com.facebook.ads.NativeAdLayout;
 import com.google.android.gms.ads.AdListener;
@@ -24,9 +26,7 @@ import com.google.android.gms.ads.VideoOptions;
 import com.google.android.gms.ads.nativead.MediaView;
 import com.google.android.gms.ads.nativead.NativeAdOptions;
 import com.google.android.gms.ads.nativead.NativeAdView;
-import com.mbitadsdk.AdUtils;
-import com.mbitadsdk.Log;
-import com.mbitsdk.R;
+import com.ads.mbitadsdk.Log;
 
 
 public class NativeAdsBig {

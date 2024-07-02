@@ -5,16 +5,17 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LangugeActivity">
+   >
 
     <Button
         android:id="@+id/loadSecondAds"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="loadAds"
         android:text="Load Second Ads"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
 
         />
 
@@ -25,6 +26,7 @@
         android:onClick="loadNextActivity"
         android:text="Next Acticty"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loadSecondAds" />
 
 
@@ -35,7 +37,7 @@
         android:background="@drawable/new_bg_card_ads"
         app:layout_constraintBottom_toBottomOf="parent">
 
-        <RelativeLayout
+        <FrameLayout
             android:id="@+id/rlNativeAdsContainerForCardTheme"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />

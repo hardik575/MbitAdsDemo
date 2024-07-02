@@ -1,6 +1,5 @@
-package com.mbitadsdk;
+package com.ads.mbitadsdk;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.FrameLayout;
@@ -9,10 +8,10 @@ import android.widget.RelativeLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.ads.mbitsdkmodel.R;
 import com.facebook.shimmer.ShimmerFrameLayout;
-import com.mbitadsdk.intad.IntCallback;
-import com.mbitadsdk.nativead.NativeAdLoadSucessCallBack;
-import com.mbitsdk.R;
+import com.ads.mbitadsdk.intad.IntCallback;
+import com.ads.mbitadsdk.nativead.NativeAdLoadSucessCallBack;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -36,9 +35,9 @@ public class MainActivity extends AppCompatActivity {
         rlNativeAdsContainerForNativeMedium = findViewById(R.id.rlNativeAdsContainerForNativeMedium);
 
 
-        MbitAds.getInstance().PreLoadInterstitialAd(MainActivity.this, "ca-app-pub-3940256099942544/1033173712", "0");
+        MbitAds.getInstance().PreLoadInterstitialAd(MainActivity.this, "ca-app-pub-3940256099942544/1033173712", true);
 
-//        MbitAds.getInstance().setAllAdOnOff("off");
+//        MbitAds.getInstance().SetAllAdOnOff("off");
         MbitAds.getInstance().setDebugMode(false);
 
         MbitAds.getInstance().initAppOpen();
@@ -50,19 +49,19 @@ public class MainActivity extends AppCompatActivity {
 //        MbitAds.getInstance().rlNativeAdsCustom = rlNativeAdsContainerForNativeMedium;
 //        MbitAds.getInstance().shimmerFrameLayoutNativeAdsCustom = shimmer_container_banner;
 
-        MbitAds.getInstance().setLayoutCustom(rlNativeAdsContainerForNativeMedium, shimmer_container_banner);
-        MbitAds.getInstance().LoadNativeCustom(MainActivity.this,
-                R.layout.native_ad_view_large_card, MainActivity.this, admobId, true, "0", new NativeAdLoadSucessCallBack() {
-                    @Override
-                    public void nativeAdLoaded(View view) {
-
-                    }
-
-                    @Override
-                    public void nativeAdFailedToLoad() {
-
-                    }
-                });
+//        MbitAds.getInstance().setLayoutCustom(rlNativeAdsContainerForNativeMedium, shimmer_container_banner);
+//        MbitAds.getInstance().LoadOnTimeNativeCustom(MainActivity.this,
+//                R.layout.native_ad_view_large_card, MainActivity.this, admobId, true, "0", new NativeAdLoadSucessCallBack() {
+//                    @Override
+//                    public void onNativeAdLoadedSucessFully(View view) {
+//
+//                    }
+//
+//                    @Override
+//                    public void onNativeAdFailedToLoad() {
+//
+//                    }
+//                });
 
 
 //        functionClass.LoadInterstitialAdForHomeScreen(this);
@@ -70,12 +69,12 @@ public class MainActivity extends AppCompatActivity {
 
 //        mbitAds.showNativeMedium(MainActivity.this, MainActivity.this, true, shimmer_container_banner, rlNativeAdsContainerForNativeMedium, admobId, "0", "0", new NativeAdLoadSucessCallBack() {
 //            @Override
-//            public void nativeAdLoaded(View view) {
+//            public void onNativeAdLoadedSucessFully(View view) {
 //
 //            }
 //
 //            @Override
-//            public void nativeAdFailedToLoad() {
+//            public void onNativeAdFailedToLoad() {
 //
 //            }
 //        });
@@ -83,12 +82,12 @@ public class MainActivity extends AppCompatActivity {
 
 //        mbitAds.LoadNativeMedium(MainActivity.this, admobId, fbmobId, "0", "0", 0, new NativeAdLoadSucessCallBack() {
 //            @Override
-//            public void nativeAdLoaded(View view) {
+//            public void onNativeAdLoadedSucessFully(View view) {
 //
 //            }
 //
 //            @Override
-//            public void nativeAdFailedToLoad() {
+//            public void onNativeAdFailedToLoad() {
 //
 //            }
 //        });
@@ -135,7 +134,7 @@ public class MainActivity extends AppCompatActivity {
 //        });
 
 //        MbitAds.getInstance().intCallback = callBackHome;
-//        MbitAds.getInstance().ShowIntForOtherScreen(MainActivity.this,"ca-app-pub-3940256099942544/1033173712","0");
+//        MbitAds.getInstance().ForceShowIntAd(MainActivity.this,"ca-app-pub-3940256099942544/1033173712","0");
 
 
 //        startActivity(new Intent(MainActivity.this, HomeActivity.class));
@@ -168,14 +167,14 @@ public class MainActivity extends AppCompatActivity {
 //            }
 //        });
 
-        startActivity(new Intent(MainActivity.this, HomeActivity.class));
+//        startActivity(new Intent(MainActivity.this, HomeActivity.class));
     }
 
     private IntCallback callBackHome = new IntCallback() {
         @Override
         public void adIntClose() {
 
-            startActivity(new Intent(MainActivity.this, HomeActivity.class));
+//            startActivity(new Intent(MainActivity.this, HomeActivity.class));
         }
 
         @Override

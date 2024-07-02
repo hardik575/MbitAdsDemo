@@ -30,12 +30,12 @@ dependencyResolutionManagement {
         }
         maven { url='https://jitpack.io'}
         jcenter()
-//        maven {
-//            url 'https://artifact.bytedance.com/repository/pangle'
-//        }
-//        maven {
-//            url 'https://dl-maven-android.mintegral.com/repository/mbridge_android_sdk_oversea'
-//        }
+        maven {
+            url 'https://artifact.bytedance.com/repository/pangle'
+        }
+        maven {
+            url 'https://dl-maven-android.mintegral.com/repository/mbridge_android_sdk_oversea'
+        }
 
 //        mavenCentral()
 //        maven {
@@ -50,5 +50,6 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "MbitSdk"
-include ':app'
 include ':mbitads'
+
+include ':MbitSdkModel'

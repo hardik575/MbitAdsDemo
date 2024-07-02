@@ -18,7 +18,7 @@ import com.ads.mbitadsdk.Log;
 import com.ads.mbitadsdk.MbitAds;
 import com.ads.mbitadsdk.MyApp;
 
-public class AdmobAndFBInterstitialAdsMediation {
+public class AdmobInterstitialAdsMediation {
     public InterstitialAd mInterstitialAdApp;
     private Context context;
     private String admobId;
@@ -26,7 +26,7 @@ public class AdmobAndFBInterstitialAdsMediation {
     private String TAG = "IntMediation";
 
 
-    public AdmobAndFBInterstitialAdsMediation(Context cntx, String admobInterstitialId, IntCallback intCallback) {
+    public AdmobInterstitialAdsMediation(Context cntx, String admobInterstitialId, IntCallback intCallback) {
         context = cntx;
         admobId = admobInterstitialId;
         this.intCallback = intCallback;

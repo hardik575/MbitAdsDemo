@@ -1,9 +1,9 @@
-package com.mbitadsdk.intad;
+package com.ads.mbitadsdk.intad;
 
 import android.content.Context;
 import android.os.Bundle;
 
-import com.mbitadsdk.AdUtils;
+import com.ads.mbitadsdk.AdUtils;
 
 
 public class AdmobIntFirebaseAnalyticalEvent {

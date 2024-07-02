@@ -1,10 +1,7 @@
-package com.mbitadsdk.rewardint;
+package com.ads.mbitadsdk.rewardint;
 
 import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
-import android.os.Bundle;
-import android.os.Looper;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,13 +14,9 @@ import com.google.android.gms.ads.OnUserEarnedRewardListener;
 import com.google.android.gms.ads.rewarded.RewardItem;
 import com.google.android.gms.ads.rewarded.RewardedAd;
 import com.google.android.gms.ads.rewarded.RewardedAdLoadCallback;
-import com.google.android.gms.ads.rewardedinterstitial.RewardedInterstitialAd;
-import com.google.android.gms.ads.rewardedinterstitial.RewardedInterstitialAdLoadCallback;
-import com.mbitadsdk.Log;
+import com.ads.mbitadsdk.Log;
 
-import java.util.logging.Handler;
-
-import com.mbitadsdk.AdsWaitingDailog;
+import com.ads.mbitadsdk.AdsWaitingDailog;
 
 public class RewardedInterstitialAds {
 

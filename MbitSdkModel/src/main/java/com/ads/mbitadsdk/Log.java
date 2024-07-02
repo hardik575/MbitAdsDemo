@@ -1,4 +1,4 @@
-package com.mbitadsdk;
+package com.ads.mbitadsdk;
 
 public class Log {
 

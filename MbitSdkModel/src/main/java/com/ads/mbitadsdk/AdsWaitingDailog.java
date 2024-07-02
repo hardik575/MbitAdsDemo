@@ -1,4 +1,4 @@
-package com.mbitadsdk;
+package com.ads.mbitadsdk;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -11,10 +11,10 @@ import android.widget.FrameLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.ads.mbitsdkmodel.R;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
-import com.mbitsdk.R;
 
 
 public class AdsWaitingDailog extends BottomSheetDialogFragment {

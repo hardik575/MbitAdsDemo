@@ -1,4 +1,4 @@
-package com.mbitadsdk.intad;
+package com.ads.mbitadsdk.intad;
 
 public interface IntCallback {
     void adIntClose();

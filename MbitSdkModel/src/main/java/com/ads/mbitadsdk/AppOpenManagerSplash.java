@@ -1,4 +1,4 @@
-package com.mbitadsdk;
+package com.ads.mbitadsdk;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -13,10 +13,7 @@ import com.google.android.gms.ads.FullScreenContentCallback;
 import com.google.android.gms.ads.LoadAdError;
 import com.google.android.gms.ads.appopen.AppOpenAd;
 import com.google.android.gms.ads.appopen.AppOpenAd.AppOpenAdLoadCallback;
-import com.mbitadsdk.intad.IntCallback;
-
-
-import java.util.Objects;
+import com.ads.mbitadsdk.intad.IntCallback;
 
 public class AppOpenManagerSplash {
 

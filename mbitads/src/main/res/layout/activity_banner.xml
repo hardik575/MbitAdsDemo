@@ -7,4 +7,70 @@
     android:layout_height="match_parent"
     tools:context="com.screen.BannerActivity">
 
+
+    <LinearLayout
+        android:id="@+id/llBannnerAds"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <include layout="@layout/load_fb_banner" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtInterSila"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Intersial Ads"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <RelativeLayout
+        android:id="@+id/rltAdView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/new_bg_card_ads"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/rlNativeAdsContainerForCardTheme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <include layout="@layout/custom_native_shime_big" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rltNativeMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:background="@drawable/new_bg_card_ads"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/rlNativeAdsContainerForNativeMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <include layout="@layout/native_shimmer_medium" />
+
+    </RelativeLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

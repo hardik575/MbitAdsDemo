@@ -1,7 +1,9 @@
-package com.ads;
+package com.screen;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.view.View;
 
 import androidx.activity.EdgeToEdge;
@@ -10,12 +12,18 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.mbitadsdk.MbitAds;
-import com.mbitadsdk.intad.IntCallback;
-import com.mbitadsdk.nativead.NativeAdLoadSucessCallBack;
+
+import com.ads.mbitadsdk.MbitAds;
+import com.ads.mbitadsdk.intad.IntCallback;
+import com.ads.mbitadsdk.nativead.NativeAdLoadSucessCallBack;
+import com.mbitsdk.R;
 
 public class SplashActivity extends AppCompatActivity {
 
+    private long TIMEOUT_SPLASH = 30000;
+    private long TIME_DELAY_SPLASH = 5000;
+    private boolean isFirstRunApp = true;
+    private final String typeAdsSplash = "intera";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,41 +36,51 @@ public class SplashActivity extends AppCompatActivity {
             return insets;
         });
 
-        MbitAds.getInstance().setAllAdOnOff("on");
+        MbitAds.getInstance().intisialAdMob(SplashActivity.this);
+        MbitAds.getInstance().SetAllAdOnOff(false);
+        MbitAds.getInstance().setUniversalClickCount(3);
 
-        MbitAds.getInstance().LoadNativeLangugeSelect(SplashActivity.this, "0", "ca-app-pub-3940256099942544/2247696110", new NativeAdLoadSucessCallBack() {
+
+
+
+        MbitAds.getInstance().PreLoadingNativeCustom(SplashActivity.this, R.layout.native_ad_view_large_card, this, true, "ca-app-pub-3940256099942544/2247696110", new NativeAdLoadSucessCallBack() {
             @Override
-            public void nativeAdLoaded(View view) {
-
+            public void onNativeAdLoadedSucessFully(View view) {
+                MyApplication.getApplication().getStorageCommon().nativeAdsLanguage.setValue(view);
             }
 
             @Override
-            public void nativeAdFailedToLoad() {
-
-            }
-        });
-
-
-
-
-        MbitAds.getInstance().LoadNativeLangugeSelectTwo(SplashActivity.this, "0", "ca-app-pub-3940256099942544/2247696110", new NativeAdLoadSucessCallBack() {
-            @Override
-            public void nativeAdLoaded(View view) {
-
-            }
-
-            @Override
-            public void nativeAdFailedToLoad() {
+            public void onNativeAdFailedToLoad() {
 
             }
         });
+
+        final Handler handler = new Handler(Looper.getMainLooper());
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                MbitAds.getInstance().PreLoadingNativeCustom(SplashActivity.this, R.layout.native_ad_view_large_card, SplashActivity.this, true, "ca-app-pub-3940256099942544/2247696110", new NativeAdLoadSucessCallBack() {
+                    @Override
+                    public void onNativeAdLoadedSucessFully(View view) {
+                        MyApplication.getApplication().getStorageCommon().nativeAdsLanguageSecond.setValue(view);
+                    }
+
+                    @Override
+                    public void onNativeAdFailedToLoad() {
+
+                    }
+                });
+
+            }
+        }, 2000);
+
 
         MbitAds.getInstance().initAppOpenSplash(SplashActivity.this, "ca-app-pub-3940256099942544/9257395921", new IntCallback() {
             @Override
             public void adIntClose() {
 
-                Intent intent=new Intent(SplashActivity.this,LangugeActivity.class);
-                startActivity(intent);
+
+                navigateToNextScreen();
 
             }
 
@@ -87,4 +105,22 @@ public class SplashActivity extends AppCompatActivity {
             }
         });
     }
+
+
+    private void navigateToNextScreen() {
+        if (isDestroyed() || isFinishing()) {
+            return;
+        }
+        Intent intent = new Intent(SplashActivity.this, LangugeActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
+
+
 }

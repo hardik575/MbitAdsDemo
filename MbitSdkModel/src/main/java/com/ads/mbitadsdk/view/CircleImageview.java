@@ -1,4 +1,4 @@
-package com.mbitadsdk.view;
+package com.ads.mbitadsdk.view;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -30,7 +30,7 @@ import androidx.annotation.ColorRes;
 import androidx.annotation.DrawableRes;
 import androidx.annotation.RequiresApi;
 
-import com.mbitsdk.R;
+import com.ads.mbitsdkmodel.R;
 
 
 @SuppressWarnings("UnusedDeclaration")

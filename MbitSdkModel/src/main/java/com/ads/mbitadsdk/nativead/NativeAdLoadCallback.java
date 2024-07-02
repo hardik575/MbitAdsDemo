@@ -1,4 +1,4 @@
-package com.mbitadsdk.nativead;
+package com.ads.mbitadsdk.nativead;
 
 public interface NativeAdLoadCallback {
      void nativeAdLoadedSuccessfully(String eventName);

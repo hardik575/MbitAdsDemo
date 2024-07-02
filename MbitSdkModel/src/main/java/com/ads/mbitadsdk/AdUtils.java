@@ -1,4 +1,4 @@
-package com.mbitadsdk;
+package com.ads.mbitadsdk;
 
 import android.annotation.SuppressLint;
 import android.content.Context;

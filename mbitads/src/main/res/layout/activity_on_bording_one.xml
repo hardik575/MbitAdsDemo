@@ -13,7 +13,11 @@
         android:layout_height="wrap_content"
         android:text="onBording1"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="@dimen/_20sdp"
+        />
 
 
     <Button
@@ -21,7 +25,7 @@
         android:layout_height="wrap_content"
         android:onClick="next"
         android:text="Next"
-
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt" />
 

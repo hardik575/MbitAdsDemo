@@ -1,4 +1,4 @@
-package com.mbitadsdk.rewardint;
+package com.ads.mbitadsdk.rewardint;
 
 public interface RewaredIntCallback {
 

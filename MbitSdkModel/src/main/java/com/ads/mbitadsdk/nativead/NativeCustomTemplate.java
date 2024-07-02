@@ -1,4 +1,4 @@
-package com.mbitadsdk.nativead;
+package com.ads.mbitadsdk.nativead;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -13,8 +13,8 @@ import androidx.lifecycle.Lifecycle;
 import androidx.lifecycle.LifecycleEventObserver;
 import androidx.lifecycle.LifecycleOwner;
 
-import com.facebook.ads.NativeAd;
-import com.facebook.ads.NativeAdLayout;
+import com.ads.mbitadsdk.AdUtils;
+import com.ads.mbitsdkmodel.R;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdLoader;
 import com.google.android.gms.ads.AdValue;
@@ -24,9 +24,7 @@ import com.google.android.gms.ads.VideoOptions;
 import com.google.android.gms.ads.nativead.MediaView;
 import com.google.android.gms.ads.nativead.NativeAdOptions;
 import com.google.android.gms.ads.nativead.NativeAdView;
-import com.mbitadsdk.AdUtils;
-import com.mbitadsdk.Log;
-import com.mbitsdk.R;
+import com.ads.mbitadsdk.Log;
 
 
 public class NativeCustomTemplate {
@@ -46,7 +44,7 @@ public class NativeCustomTemplate {
     LifecycleOwner lifecycleOwner;
 
     public NativeCustomTemplate(Context mContext, int layout, LifecycleOwner lifecycleOwner, boolean isReloadAds, String admobNativeAdId, NativeAdLoadCallback nativeAdLoadCallback) {
-//        this.mContext = mContext;
+        this.mContext = mContext;
         isNativeAdsAviable = false;
         if (lifecycleOwner instanceof Context) {
             this.mContext = (Context) lifecycleOwner;
@@ -220,7 +218,7 @@ public class NativeCustomTemplate {
 
     }
 
-    public View getInativeAdObjForThemeList() {
+    public View getViewData() {
         Log.e("AAAAAAAAAA", "not null" + viewNative.getParent());
         if (viewNative.getParent() != null) {
             Log.e("AAAAAAAAAA", "not null");

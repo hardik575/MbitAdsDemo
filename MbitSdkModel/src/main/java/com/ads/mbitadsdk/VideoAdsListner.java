@@ -1,4 +1,4 @@
-package com.mbitadsdk;
+package com.ads.mbitadsdk;
 
 public interface VideoAdsListner {
     void videoAdsClose();

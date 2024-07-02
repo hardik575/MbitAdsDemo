@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package com.mbitadsdk.nativetemplates;
+package com.ads.mbitadsdk.nativetemplates;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -28,9 +28,9 @@ import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 
+import com.ads.mbitsdkmodel.R;
 import com.google.android.gms.ads.nativead.NativeAd;
 import com.google.android.gms.ads.nativead.NativeAdView;
-import com.mbitsdk.R;
 
 
 /**

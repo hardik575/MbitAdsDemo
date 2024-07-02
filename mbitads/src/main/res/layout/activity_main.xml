@@ -1,18 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-  >
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical">
 
-    <TextView
+    <Button
+        android:id="@+id/btnBaner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="Baner Ads Load"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/btnCollapsingBaner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Collapsing Baner Ads Load"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/btnNativeBig"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Native Large Ads Load"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnBaner" />
+
+    <Button
+        android:id="@+id/btnPreLoadingNativeBig"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Preloded Show Native Large Ad"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnBaner" />
+
+    <Button
+        android:id="@+id/btnNativeMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Native Medium Ads Load"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnNativeBig" />
+
+
+    <Button
+        android:id="@+id/btnInterSial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="preloading Intersial Ads Show"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnNativeMedium" />
+
+
+    <Button
+        android:id="@+id/btnInterSialFocrc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Intersial Ads Force Show"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnNativeMedium" />
+
+
+    <Button
+        android:id="@+id/btnRewardAd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RewardAd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnNativeMedium" />
+
+
+
+    <Button
+        android:id="@+id/btnThreeClickIterSial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Three click to show ad"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnNativeMedium" />
+
+
+</LinearLayout>

@@ -1,4 +1,4 @@
-package com.mbitadsdk.nativead;
+package com.ads.mbitadsdk.nativead;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -10,17 +10,17 @@ import androidx.lifecycle.Lifecycle;
 import androidx.lifecycle.LifecycleEventObserver;
 import androidx.lifecycle.LifecycleOwner;
 
+import com.ads.mbitadsdk.AdUtils;
+import com.ads.mbitadsdk.nativetemplates.NativeTemplateStyle;
+import com.ads.mbitadsdk.nativetemplates.TemplateViewForHome;
+import com.ads.mbitsdkmodel.R;
 import com.facebook.ads.NativeAdLayout;
 import com.facebook.ads.NativeBannerAd;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdLoader;
 import com.google.android.gms.ads.LoadAdError;
 import com.google.android.gms.ads.nativead.NativeAd;
-import com.mbitadsdk.AdUtils;
-import com.mbitadsdk.Log;
-import com.mbitadsdk.nativetemplates.NativeTemplateStyle;
-import com.mbitadsdk.nativetemplates.TemplateViewForHome;
-import com.mbitsdk.R;
+import com.ads.mbitadsdk.Log;
 
 
 public class NativeMediumTemplate {

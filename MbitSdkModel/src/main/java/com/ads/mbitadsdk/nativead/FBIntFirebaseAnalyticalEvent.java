@@ -1,9 +1,9 @@
-package com.mbitadsdk.nativead;
+package com.ads.mbitadsdk.nativead;
 
 import android.content.Context;
 import android.os.Bundle;
 
-import com.mbitadsdk.AdUtils;
+import com.ads.mbitadsdk.AdUtils;
 
 
 public class FBIntFirebaseAnalyticalEvent {

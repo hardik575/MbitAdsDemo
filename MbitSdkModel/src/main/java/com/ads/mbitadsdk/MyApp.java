@@ -1,21 +1,11 @@
-package com.mbitadsdk;
+package com.ads.mbitadsdk;
 
-import android.app.Application;
-import android.content.Context;
 import android.os.Bundle;
 import android.provider.Settings;
 
 
-import androidx.annotation.NonNull;
-import androidx.lifecycle.Lifecycle;
-import androidx.lifecycle.LifecycleOwner;
-import androidx.lifecycle.ProcessLifecycleOwner;
 import androidx.multidex.MultiDexApplication;
 
-import com.facebook.FacebookSdk;
-import com.facebook.ads.AdSettings;
-import com.facebook.ads.AudienceNetworkAds;
-import com.facebook.ads.internal.settings.AdInternalSettings;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.RequestConfiguration;
@@ -46,19 +36,8 @@ public class MyApp extends MultiDexApplication {
         super.onCreate();
         context = this;
         instance = this;
-
         FirebaseApp.initializeApp(context);
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(context);
-
-
-        MobileAds.initialize(
-                this,
-                new OnInitializationCompleteListener() {
-                    @Override
-                    public void onInitializationComplete(InitializationStatus initializationStatus) {
-                    }
-                });
-
     }
 
 
