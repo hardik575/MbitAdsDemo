@@ -68,6 +68,10 @@ dependencies {
     api('com.android.billingclient:billing:7.0.0')
 }
 
+task sourceJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier "sources"
+}
 
 afterEvaluate {
 
@@ -84,14 +88,23 @@ afterEvaluate {
 
 
         publishing {
+
+            publications.all {
+                pom.withXml {
+                    asNode().dependencies.'*'
+                            .findAll() {
+                                it.scope.text() == 'runtime' &&
+                                        project.configurations.implementation.allDependencies.find {
+                                            dep -> dep.name == it.artifactId.text()
+                                        }
+                            }.each { it.scope*.value = 'compile'}
+                }
+            }
+
             repositories {
                 maven {
                     name = "GitHubPackages"
                     url = uri("https://maven.pkg.github.com/hardik575/MbitAdsSdk")
-//                credentials {
-//                    username = System.getenv("hardik575")
-//                    password = System.getenv("GITHUB_TOKEN")
-//                }
                     credentials {
                         username = "hardik575"
                         password = "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"
@@ -101,7 +114,6 @@ afterEvaluate {
                     }
                 }
             }
-
 
         }
     }
