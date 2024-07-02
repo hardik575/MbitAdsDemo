@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer_container_banner_large"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:shimmer_auto_start="true"
+        app:shimmer_base_color="#ccc">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/native_bg_color">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_4sdp">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/mainImg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <RelativeLayout
+                        android:id="@+id/cardView"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_110sdp"
+                        android:layout_marginTop="@dimen/_6sdp"
+                        android:maxHeight="@dimen/_140sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:cardBackgroundColor="@color/lightTransparent"
+                            app:cardCornerRadius="@dimen/_12sdp"
+                            app:cardElevation="0dp"
+                            tools:ignore="MissingConstraints">
+
+                        </androidx.cardview.widget.CardView>
+
+
+                    </RelativeLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rltadView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/mainImg">
+
+                    <RelativeLayout
+                        android:id="@+id/rltadViewInside"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4sdp">
+
+
+                        <ImageView
+                            android:id="@+id/ad_app_icon"
+                            android:layout_width="@dimen/_32sdp"
+                            android:layout_height="@dimen/_32sdp"
+                            android:background="@color/lightTransparent"
+
+                            android:layout_centerVertical="true"
+
+                            />
+
+
+                        <TextView
+                            android:id="@+id/ad_headline"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/_6sdp"
+                            android:layout_toRightOf="@+id/ad_app_icon"
+                            android:maxLength="28"
+                            android:background="@color/lightTransparent"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_14ssp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/ad_headline"
+                            android:layout_marginStart="@dimen/_6sdp"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:layout_toRightOf="@+id/ad_app_icon">
+
+                            <TextView
+                                android:id="@+id/adChoise"
+                                style="@style/AppTheme.Ads"
+                                android:layout_alignParentEnd="true"
+                                android:layout_gravity="center_vertical|center"
+
+                                android:layout_marginTop="2dp"
+                                android:gravity="center_vertical|center"
+                                app:layout_constraintEnd_toEndOf="parent" />
+
+                            <TextView
+                                android:id="@+id/ad_body"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/rltadViewInside"
+                                android:layout_marginStart="@dimen/_6sdp"
+                                android:layout_marginTop="2dp"
+                                android:layout_marginEnd="@dimen/_10sdp"
+                                android:justificationMode="none"
+                                android:maxLength="90"
+                                android:background="@color/lightTransparent"
+                                android:textColor="@color/txt_sub_title_color"
+                                android:textSize="@dimen/_8ssp" />
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/ad_call_to_action"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_26sdp"
+                    android:layout_below="@+id/rltadView"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:layout_marginBottom="@dimen/_4sdp"
+                    android:background="@drawable/new_bg_button"
+                    android:gravity="center|center_vertical"
+                    android:text="visit Site"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_8ssp" />
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

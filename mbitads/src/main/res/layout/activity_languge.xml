@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LangugeActivity">
+
+    <Button
+        android:id="@+id/loadSecondAds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="loadAds"
+        android:text="Load Second Ads"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="loadNextActivity"
+        android:text="Next Acticty"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loadSecondAds" />
+
+
+    <RelativeLayout
+        android:id="@+id/rltAdView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/new_bg_card_ads"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/rlNativeAdsContainerForCardTheme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <include layout="@layout/native_shime_big" />
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

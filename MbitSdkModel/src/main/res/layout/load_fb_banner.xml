@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llAdContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/new_bg_card_ads"
+    android:orientation="vertical"
+
+
+    >
+    <!--android:background="@drawable/gnt_outline_shape"-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/native_bg_color"
+
+        />
+
+    <FrameLayout
+        android:id="@+id/ad_view_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmer_container_banner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:shimmer_auto_start="true"
+            app:shimmer_base_color="#ccc">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="56dip">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="5dip">
+
+                    <ImageView
+                        android:layout_width="50dip"
+                        android:layout_height="match_parent"
+                        android:background="@color/lightTransparent"
+
+                        android:scaleType="centerCrop" />
+
+                    <LinearLayout
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dip"
+                        android:layout_marginRight="5dip"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/lightTransparent"
+                            android:ellipsize="end"
+                            android:lines="1"
+                            android:textColor="@android:color/black"
+                            android:textSize="15.0sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dip"
+                            android:background="@color/lightTransparent"
+                            android:ellipsize="end"
+                            android:lines="1"
+                            android:textColor="@android:color/darker_gray"
+                            android:textSize="14.0sp" />
+
+                    </LinearLayout>
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@color/lightTransparent"
+                        android:gravity="center"
+
+                        android:textColor="@android:color/white" />
+
+                </LinearLayout>
+
+                <TextView
+                    style="@style/AppTheme.Ads"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true" />
+            </RelativeLayout>
+        </com.facebook.shimmer.ShimmerFrameLayout>
+    </FrameLayout>
+
+</LinearLayout>
+
