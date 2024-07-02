@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
                 MbitAds.getInstance().clickCount++;
                 if (MbitAds.getInstance().clickCount >= MbitAds.getInstance().getUniversalClickCount()) {
                     MbitAds.getInstance().intCallback = callBackHome;
-                    MbitAds.getInstance().ForceShowIntAd(MainActivity.this, "ca-app-pub-3940256099942544/1033173712", "0");
+                    MbitAds.getInstance().ForceShowIntAd(MainActivity.this, "ca-app-pub-3940256099942544/1033173712", true);
                 }
 
             }
@@ -200,7 +200,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 MbitAds.getInstance().intCallback = callBackHome;
-                MbitAds.getInstance().ForceShowIntAd(MainActivity.this, "ca-app-pub-3940256099942544/1033173712", "0");
+                MbitAds.getInstance().ForceShowIntAd(MainActivity.this, "ca-app-pub-3940256099942544/1033173712", true);
             }
         });
 

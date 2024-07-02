@@ -582,7 +582,7 @@ public class MbitAds {
 
     private AppCompatActivity mPreloadScreenActObj;
 
-    public void ForceShowIntAd(AppCompatActivity mCurrentAct, String adMobIntId, String onOff) {
+    public void ForceShowIntAd(AppCompatActivity mCurrentAct, String adMobIntId, boolean isShowAd) {
         mPreloadScreenActObj = mCurrentAct;
 
         if (mPreLoadIntAdsObj != null && mPreLoadIntAdsObj.isAdsAvailable()) {
@@ -612,7 +612,7 @@ public class MbitAds {
                 }
             }, 1500);
         } else {
-            PreLoadInterstitialAd(mCurrentAct, adMobIntId, onOff);
+            PreLoadInterstitialAd(mCurrentAct, adMobIntId, isShowAd);
         }
     }
 
