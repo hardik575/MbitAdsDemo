@@ -10,14 +10,22 @@ pluginManagement {
         jcenter()
 
         mavenCentral()
-//        maven {
-//            name = "GitHubPackages"
-//            url = uri("https://maven.pkg.github.com/hardik575/MbitAds")
-//            credentials {
-//                username = "hardik"
-//                password = "hardik@123"
-//            }
-//        }
+        repositories {
+            google()
+            mavenCentral()
+            maven(){
+                url="https://maven.google.com"
+            }
+            maven { url='https://jitpack.io'}
+            maven {
+                url 'https://artifact.bytedance.com/repository/pangle'
+            }
+            maven {
+                url 'https://dl-maven-android.mintegral.com/repository/mbridge_android_sdk_oversea'
+            }
+
+        }
+
     }
 }
 dependencyResolutionManagement {
@@ -36,20 +44,24 @@ dependencyResolutionManagement {
         maven {
             url 'https://dl-maven-android.mintegral.com/repository/mbridge_android_sdk_oversea'
         }
+        repositories {
+            google()
+            mavenCentral()
+            maven(){
+                url="https://maven.google.com"
+            }
+            maven { url='https://jitpack.io'}
+            maven {
+                url 'https://artifact.bytedance.com/repository/pangle'
+            }
+            maven {
+                url 'https://dl-maven-android.mintegral.com/repository/mbridge_android_sdk_oversea'
+            }
 
-//        mavenCentral()
-//        maven {
-//            name = "GitHubPackages"
-//            url = uri("https://maven.pkg.github.com/hardik575/MbitAds")
-//            credentials {
-//                username = "hardik"
-//                password = "hardik@123"
-//            }
-//        }
+        }
     }
 }
 
 rootProject.name = "MbitSdk"
 include ':mbitads'
-
 include ':MbitSdkModel'
