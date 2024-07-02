@@ -78,42 +78,41 @@ afterEvaluate {
         publishing.publications.create(varint.name, MavenPublication) {
             groupId = 'com.ads'
             artifactId = 'mbitads'
-            version = '1.5-SNAPSHOT'
+            version = '1.7'
 
             // Ensure the task produces the AAR file
             artifact("$buildDir/outputs/aar/${project.name}-release.aar")
         }
 
 
-        publishing {
-
-            publications.all {
-                pom.withXml {
-                    asNode().dependencies.'*'
-                            .findAll() {
-                                it.scope.text() == 'runtime' &&
-                                        project.configurations.implementation.allDependencies.find {
-                                            dep -> dep.name == it.artifactId.text()
-                                        }
-                            }.each { it.scope*.value = 'compile'}
-                }
-            }
-
-            repositories {
-                maven {
-                    name = "GitHubPackages"
-                    url = uri("https://maven.pkg.github.com/hardik575/MbitAdsSdk")
-                    credentials {
-                        username = "hardik575"
-                        password = "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"
-                    }
-                    mavenContent {
-                        snapshotsOnly() // Ensure it only allows snapshots
-                    }
-                }
-            }
-
-        }
+//        publishing {
+//            publications.all {
+//                pom.withXml {
+//                    asNode().dependencies.'*'
+//                            .findAll() {
+//                                it.scope.text() == 'runtime' &&
+//                                        project.configurations.implementation.allDependencies.find {
+//                                            dep -> dep.name == it.artifactId.text()
+//                                        }
+//                            }.each { it.scope*.value = 'compile'}
+//                }
+//            }
+//
+//            repositories {
+//                maven {
+//                    name = "GitHubPackages"
+//                    url = uri("https://maven.pkg.github.com/hardik575/MbitAdsDemo")
+//                    credentials {
+//                        username = "hardik575"
+//                        password = "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"
+//                    }
+//                    mavenContent {
+//                        snapshotsOnly() // Ensure it only allows snapshots
+//                    }
+//                }
+//            }
+//
+//        }
     }
 
 
