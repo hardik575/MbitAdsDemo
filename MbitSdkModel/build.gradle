@@ -34,9 +34,7 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.2.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
     api fileTree(include: ['*.jar', '*.aar'], dir: 'libs')
-
     api('com.android.support:multidex:1.0.3')
-
     api('com.google.android.gms:play-services-ads:22.2.0')
     api('com.google.android.ump:user-messaging-platform:2.2.0')
     api('com.google.ads.mediation:vungle:7.3.2.0')
@@ -68,6 +66,47 @@ dependencies {
     api('com.squareup.retrofit2:converter-gson:2.1.0')
     api('com.airbnb.android:lottie:6.4.1')
     api('com.android.billingclient:billing:7.0.0')
+}
+
+
+afterEvaluate {
+
+    android.libraryVariants.each { varint ->
+
+        publishing.publications.create(varint.name, MavenPublication) {
+            groupId = 'com.ads'
+            artifactId = 'mbitads'
+            version = '1.4-SNAPSHOT'
+
+            // Ensure the task produces the AAR file
+            artifact("$buildDir/outputs/aar/${project.name}-release.aar")
+        }
+
+
+        publishing {
+            repositories {
+                maven {
+                    name = "GitHubPackages"
+                    url = uri("https://maven.pkg.github.com/hardik575/MbitAdsSdk")
+//                credentials {
+//                    username = System.getenv("hardik575")
+//                    password = System.getenv("GITHUB_TOKEN")
+//                }
+                    credentials {
+                        username = "hardik575"
+                        password = "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"
+                    }
+                    mavenContent {
+                        snapshotsOnly() // Ensure it only allows snapshots
+                    }
+                }
+            }
+
+
+        }
+    }
+
+
 }
 
 

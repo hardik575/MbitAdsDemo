@@ -24,21 +24,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="com.screen.LangugeActivity"
-            android:exported="true"></activity>
-        <activity
-            android:name="com.screen.OnBordingOneActivity"
-            android:exported="true"></activity>
-        <activity
-            android:name="com.screen.OnBordingTwoActivity"
-            android:exported="true"></activity>
-        <activity
-            android:name="com.screen.OnBordingThirdActivity"
-            android:exported="true"></activity>
-        <activity
-            android:name="com.screen.StartScreeenActivity"
-            android:exported="true"></activity>
+
         <activity
             android:name="com.screen.MainActivity"
             android:exported="true">
@@ -48,7 +34,7 @@
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="@string/admob_app_id" />
+            android:value="ca-app-pub-4973559944609228~8148968625" />
         <meta-data
             android:name="com.google.android.gms.ads.DELAY_APP_MEASUREMENT_INIT"
             android:value="true" />

@@ -44,8 +44,9 @@ dependencies {
 
     api project(':MbitSdkModel')
 
+//    implementation 'com.ads:mbitads:1.3-SNAPSHOT'
 
-
+//    api('com.ads:mbitads:1.4-SNAPSHOT')
 }
 
 
